@@ -84,6 +84,16 @@ if response == 'Queen':
             print('The guards start to point there spears, but the hooded figure reappers and they open the gates. You follow the hooded figure down the village streets....')
             print('You follow them into a shady tavern, to a table in the corner. "I need your help. Something precious has been stolen". Do you help or leave? ') #choice
             if response == 'help':
-                print()
+                print('The stranger gives you a horse, a sword and a map to the first hideout. Good Luck!')
+                    response = input('When you get there, you scope out the abandoned house. Do you go charging in or sneak in? ') #choice 
+                    if response == 'Charge in':
+                        print('You charge in with your sword held high. The guard dogs immediately run at you and leap for your throat! Ending ') # ending 5
+                        quit()
+                    elif response == 'sneak in':
+                        print('You quietly sneak around the back and through an open door. You see the ruby sitting on a table with no one in sight...')
+                        print('Grabbing the ruby, you sneak back out and return to the Queen. She gives you a plot of land, a house and 1000 gold pieces. You win! Ending ')  #  ending 6 WIN
+                        quit()
             elif response == 'leave':
+                print('As you get up to leave, the guards take you to jail. You lose!')
+                quit()
                 
