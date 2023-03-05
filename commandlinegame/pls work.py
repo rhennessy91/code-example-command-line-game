@@ -29,15 +29,29 @@ if setting == 'shaman':
                 print('You agree to help her. She thanks you, and you follow her to the opposite side of the room through a giant door.')
                 print('She shows you a map where she got intel that the Redbrand gang took the ruby to one of their hideouts. Head to the first hideout or to the second one? ')
                 if response == 'first':
-                    print('The Queen hands you a sword and gives you a map to the first hideout. Good Luck!')
+                    print('The Queen gives you a horse, a sword and a map to the first hideout. Good Luck!')
                     response = input('When you get there, you scope out the abandoned house. Do you go charging in or sneak in? ')
                     if response == 'Charge in':
                         print('You charge in with your sword held high. The guard dogs immediately run at you and leap for your throat! Ending 5/') # ending 5
+                        quit()
                     elif response == 'sneak in':
                         print('You quietly sneak around the back and through an open door. You see the ruby sitting on a table with no one in sight...')
                         print('Grabbing the ruby, you sneak back out and return to the Queen. She gives you a plot of land, a house and 1000 gold pieces. You win! Ending 6/')  #  ending 6
-               if response == 'second':
-                   print('The Queen gives you a horse to ride into the countryside to the cave hideout. As you approach, you see it\'s full of goblins. Search the cave or go to second hideout?  ')        
+                        quit()
+                elif response == 'second':
+                   print('The Queen gives you a horse to ride into the countryside to the cave hideout. As you approach, you see it\'s full of goblins. Search the cave or go to second hideout?  ')   
+                   if response == 'search the cave':
+                       print('You start to head into the cave, but your eyes don\'t adjust to the dark fast enough. Goblins attack and you become their dinner! Ending 7/') # ending 7
+                   elif response == 'second hideout':
+                       response = input('When you get there, you scope out the abandoned house. Do you go charging in or sneak in? ')
+                    if response == 'Charge in':
+                        print('You charge in with your sword held high. The guard dogs immediately run at you and leap for your throat! Ending 5/') # ending 5
+                        quit()
+                    elif response == 'sneak in':
+                        print('You quietly sneak around the back and through an open door. You see the ruby sitting on a table with no one in sight...')
+                        print('Grabbing the ruby, you sneak back out and return to the Queen. She gives you a plot of land, a house and 1000 gold pieces. You win! Ending 6/')  #  ending 6
+                        quit()
+                        
         elif transport == 'leave':
             print('You turn around and find yourself face to face with a tiger - No where to run! Ending 2/ ') # ending 2
             quit()               
@@ -50,6 +64,7 @@ if setting == 'shaman':
                 print('You climb down a rickety old ladder into a dark tunnel.')         
             elif response == 'hope for the best':
                 print('You hunker down in the corner, and the tiger tears through the door. CHOMP! Ending 3/') # ending 3
+                quit()
         elif transport == 'freeze':
                 print('You hunker down in the bushes, but the tiger is already on your trail. It pounces! Ending 4/') # ending 4
                 quit()     
@@ -60,8 +75,8 @@ if setting == 'shaman':
         
         
         
-# second branch (4 options)
-if setting == 'General':
+# second branch 
+if setting == 'Shaman':
     print('You travel to a meadow within the forest to see a giant castle. The hooded figure tells you to wait as they approach the guards and go inside..')
     response == input('You wait impatiently as the sun starts to beat down. Do you approach the guards or do you wait?')
     if response == 'approach':
